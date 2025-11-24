@@ -1,0 +1,12 @@
+SELECT COUNT(*) AS total_patients
+FROM Patients;
+
+SELECT AVG(amount) AS average_amount
+FROM Billing;
+
+SELECT SUM(amount) AS total_revenue
+FROM Billing;
+
+SELECT patient_id, SUM(amount) AS total_spent
+FROM Billing
+GROUP BY patient_id;
